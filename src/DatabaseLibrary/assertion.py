@@ -34,6 +34,7 @@ class Assertion(object):
         Then you will get the following:
         | Check If Exists In Database | SELECT id FROM person WHERE first_name = 'Franz Allan' | # PASS |
         | Check If Exists In Database | SELECT id FROM person WHERE first_name = 'John' | # FAIL |
+        | Check If Exists In Database | SELECT id FROM person WHERE first_name = 'Jun' | # FAIL |
         """
         if not self.query(selectStatement):
             raise AssertionError("Expected to have have at least one row from '%s' "
